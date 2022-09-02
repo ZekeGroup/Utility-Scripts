@@ -1,1 +1,1 @@
-grep -i "Total plot creation time was" chialogs/*.log |awk '{sum=sum+$6} {avg=sum/NR} {tday=8640/avg*8*101.366/1024} {plot=86400/avg} END {printf "avg %0.1f seconds, avg %0.1f min, %0.2f TiB/day, %0i plots/day \n", avg, avg/60, tday, int(plot)}'
+grep -i "Total plot creation time was" /home/plotter*/chialogs/*.log |awk '{sum=sum+$6} {avg=sum/NR} {tday=8640/avg*8*101.366/1024} {plot=86400/avg} END {printf "avg %0.1f seconds, avg %0.1f min, %0.2f TiB/day, %0i plots/day \n", avg, avg/60, tday, int(plot)}'
